@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  #test postgres database
+  test_db:
+    container_name: test_db
+    image: postgres:13.1
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: unittest1234
+    volumes:
+      - ./test_data:/srv/test_data
+      - ./init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+
+  #loinc converter
+  loinc_converter:
+    container_name: loinc_converter
+    image: docker.miracum.org/miracum-etl/loinc-conversion:1.9.5
+    ports:
+      - "8090:8080"

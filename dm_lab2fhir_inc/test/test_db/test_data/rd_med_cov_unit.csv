@@ -1,0 +1,12 @@
+organization_id,organization_name,organization_code,dept_id,dept_name,dept_code,dept_p301_code,dept_shortname,dept_valid_from,dept_valid_until,dept_valid_flag,unit_id,unit_name,unit_code,unit_shortname,unit_valid_from,unit_valid_until,unit_valid_flag,unit_type_id,unit_type_name,unit_interdisciplinary_flag,unit_icu_flag
+1,Klinikum Mannheim GmbH,1,1/MA_3400,Dermatologie,MA_3400,3400,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_2400/560801,28-3 Stat. URO,560801,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_1600,Dermatologie,MA_1600,1600,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_1600/560403,28-3 Stat. URO,560403,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_2300,Dermatologie,MA_2300,2300,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_2300/560705,28-3 Stat. URO,560705,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_0100,Dermatologie,MA_0100,100,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_0100/560910,28-3 Stat. URO,560910,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_1700,Dermatologie,MA_1700,1700,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_1700/560301,28-3 Stat. URO,560301,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_2600,Dermatologie,MA_2600,2600,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_2600/561653,28-3 Stat. URO,561653,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_3400,Dermatologie,MA_3400,3400,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_3400/561403,28-3 Stat. URO,561403,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_2600,Dermatologie,MA_2600,2600,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_2600/561601,28-3 Stat. URO,561601,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_2400,Dermatologie,MA_2400,2400,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_2400/560804,28-3 Stat. URO,560804,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_3601,Dermatologie,MA_3601,3601,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_3601/561004,28-3 Stat. URO,561004,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0
+1,Klinikum Mannheim GmbH,1,1/MA_0300,Dermatologie,MA_0300,300,DERMA,1997-01-01,9999-12-31 00:00:00,1,1/MA_0300/561008,28-3 Stat. URO,561008,28-3,1997-01-01,9999-12-31 00:00:00,1,S,Station,1,0

@@ -1,0 +1,152 @@
+image: docker:20.10-dind
+services:
+  - docker:20.10-dind
+
+variables:
+  DOCKER_REGISTRY: gitlab.dbmi.klima.ads.local:5050
+  PROJECT_PATH: /hlz/etl_taskforce/dm_lab2fhir_inc
+  IMAGE_PATH: $DOCKER_REGISTRY$PROJECT_PATH
+  TEST_PATH: '/builds/$CI_PROJECT_PATH/dm_lab2fhir_inc/test'
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+  GIT_SSL_NO_VERIFY: "0"
+  NODE_TLS_REJECT_UNAUTHORIZED: "0"
+
+.job_defaults_ci:
+  only:
+    - master
+    - develop
+    - merge_requests
+
+.job_defaults_cd:
+  only:
+    - master
+
+.docker_registry:
+  before_script:
+    - export DOCKER_TLS_CERTDIR="/cert"
+    - echo $REG_PWD | docker login -u $GITLAB_USR $DOCKER_REGISTRY --password-stdin
+  after_script:
+    - docker logout $DOCKER_REGISTRY
+  extends: .job_defaults_cd
+
+.start_test_env:
+  before_script:
+    - docker-compose -f $TEST_PATH/docker-compose.yml up -d
+  extends: .job_defaults_ci
+
+include:
+  - project: "hlz/devops/ci-templates"
+    file: ".hadolint.yml"
+
+stages:
+  - linting
+  - unit_test
+  - int_test
+  - sys_test
+  - versioning
+  - releasing
+  - k8s_releasing
+
+dockerfile_linting:
+  tags:
+    - fhir_mapper  
+  extends: .job_defaults_ci
+
+pythonfile_linting:
+  stage: linting
+  tags:
+    - fhir_mapper
+  script:
+    - echo $DOCKER_TLS_CERTDIR
+    - docker build -t etl_job -f $TEST_PATH/Dockerfile .
+    - docker run --entrypoint test/entrypoint.sh etl_job 
+  extends: .job_defaults_ci
+
+unit_test:
+  stage: unit_test
+  image:
+    name: docker/compose
+    entrypoint: [""]
+  tags:
+    - fhir_mapper
+  script:
+    - docker build -t etl_job -f $TEST_PATH/Dockerfile .
+    - docker run --network ci_pipeline etl_job -s test/unit_test.py
+      --type unit_test  --cfile test/config_dm
+  extends: .start_test_env
+
+int_test:
+  stage: int_test
+  image:
+    name: docker/compose
+    entrypoint: [""]
+  tags:
+    - fhir_mapper
+  script:
+    - docker build -t etl_job -f $TEST_PATH/Dockerfile .
+    - docker run --network ci_pipeline etl_job -s test/int_test.py
+      --type int_test --cfile test/config_dm
+  extends: .start_test_env
+
+sys_test:
+  stage: sys_test
+  image:
+    name: docker/compose
+    entrypoint: [""]
+  tags:
+    - fhir_mapper
+  script:
+    - docker build -t etl_job -f $TEST_PATH/Dockerfile .
+    - docker run --network ci_pipeline etl_job -s test/sys_test_etl.py
+      --type sys_test --app app.py --cfile test/config_dm
+  extends: .start_test_env
+
+get_next_version:
+  image: docker.miracum.org/miracum-devops/semantic-release:v17
+  tags:
+    - fhir_mapper
+  stage: versioning
+  script:
+    - npx semantic-release --dry-run --branches master --no-ci
+    - test -e .VERSION || (echo $(git describe --abbrev=0 --tags | tr -d v) > .VERSION && touch .NORELEASE)
+    - echo "Determined Version $(cat .VERSION)"
+  artifacts:
+    paths:
+      - .VERSION
+      - .NORELEASE
+    expire_in: 1 week
+  extends: .job_defaults_cd
+
+create_gitlab_release:
+  image: docker.miracum.org/miracum-devops/semantic-release:v17
+  tags:
+    - fhir_mapper
+  stage: releasing
+  script:
+    - npx semantic-release
+  extends: .job_defaults_cd
+
+create_push_docker_image:
+  image: docker:git
+  tags:
+    - fhir_mapper
+  stage: releasing
+  script:
+    - export IMAGE_TAG=v$(cat .VERSION)
+    - docker build -t $IMAGE_PATH:$IMAGE_TAG -f dply/Dockerfile .
+    - docker push $IMAGE_PATH:$IMAGE_TAG
+    - docker logout $DOCKER_REGISTRY
+  extends: .docker_registry
+
+update_k8s_manifest:
+  stage: k8s_releasing
+  script:
+    - export VERSION_TAG=v$(cat .VERSION)
+    - git config --global user.email "???"
+    - git config --global user.name "???"
+    - sed -i "s/v[0-9]\.[0-9]\.[0-9]/$VERSION_TAG/" dply/k8s_dply.yaml
+    - git add .
+    - 'git commit -m "ci: new manifest [skip ci]"'
+    - git push https://${GITLAB_USR}:${GITLAB_TOKEN}@10.3.8.51${PROJECT_PATH}.git HEAD:master
+  extends: .job_defaults_cd

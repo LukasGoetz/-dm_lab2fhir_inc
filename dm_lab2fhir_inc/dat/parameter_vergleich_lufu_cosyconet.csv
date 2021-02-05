@@ -1,0 +1,61 @@
+MIRA Parameter ,MIRACUM Parameter,System,Tag,Unit,RELMA,I2B2 Basecode
+SRT,SR tot best,body,BEST,cm[H2O].s ,91980-3,LCS-MRCM:pul:srtot:best
+SRT,SR tot pre BD,body,PRE_BD,cm[H2O].s ,,LCS-MRCM:pul:srtot:prebd
+SRT,SR tot post BD,body,POST_BD,cm[H2O].s ,,LCS-MRCM:pul:srtot:postbd
+SRT,SR tot best predicted,body,BEST_PRDC,%,91982-9,LCS-MRCM:pul:srtot:best:prdc
+SRT,SR tot pre BD predicted,body,PRE_BD_PRDC,%,,LCS-MRCM:pul:srtot:prebd:prdc
+SRT,SR tot post BD predicted,body,POST_BD_PRDC,%,,LCS-MRCM:pul:srtot:postbd:prdc
+SRE,SR eff best,body,BEST,[kPa*s/L],,LCS-MRCM:pul:sreff:best
+SRE,SR eff pre BD,body,PRE_BD,[kPa*s/L],,LCS-MRCM:pul:sreff:prebd
+SRE,SR eff post BD,body,POST_BD,[kPa*s/L],,LCS-MRCM:pul:sreff:postbd
+SRE,SR eff best predicted,body,BEST_PRDC,%,,LCS-MRCM:pul:sreff:best:prdc
+SRE,SR eff pre BD predicted,body,PRE_BD_PRDC,%,,LCS-MRCM:pul:sreff:prebd:prdc
+SRE,SR eff post BD predicted,body,POST_BD_PRDC,%,,LCS-MRCM:pul:sreff:postbd:prdc
+VCM,VC best,body,BEST,L,19866-3,LCS-MRCM:pul:vc:best
+VCM,VC pre BD ,body,PRE_BD,L,82615-6,LCS-MRCM:pul:vc:prebd
+VCM,VC post BD ,body,POST_BD,L,82616-4,LCS-MRCM:pul:vc:postbd
+VCM,VC best predicted,body,BEST_PRDC,%,,LCS-MRCM:pul:vc:best:prdc
+VCM,VC pre BD predicted,body,PRE_BD_PRDC,%,,LCS-MRCM:pul:vc:prebd:prdc
+VCM,VC post BD predicted,body,POST_BD_PRDC,%,,LCS-MRCM:pul:vc:postbd:prdc
+TLC,TLC best,body,BEST,L,19859-8,LCS-MRCM:pul:tlc:best
+TLC,TLC pre BD,body,PRE_BD,L,81450-9,LCS-MRCM:pul:tlc:prebd
+TLC,TLC post BD,body,POST_BD,L,81451-7,LCS-MRCM:pul:tlc:postbd
+TLC,TLC best predicted,body,BEST_PRDC,%,89085-5,LCS-MRCM:pul:tlc:best:prdc
+TLC,TLC pre BD predicted,body,PRE_BD_PRDC,%,,LCS-MRCM:pul:tlc:prebd:prdc
+TLC,TLC post BD predicted,body,POST_BD_PRDC,%,,LCS-MRCM:pul:tlc:postbd:prdc
+RV,RV best,body,BEST,L,20146-7,LCS-MRCM:pul:rv:best
+RV,RV pre BD,body,PRE_BD,L,81452-5,LCS-MRCM:pul:rv:prebd
+RV,RV post BD,body,POST_BD,L,81453-3,LCS-MRCM:pul:rv:postbd
+RV,RV best predicted,body,BEST_PRDC,%,,LCS-MRCM:pul:rv:best:prdc
+RV,RV pre BD predicted,body,PRE_BD_PRDC,%,,LCS-MRCM:pul:rv:postbd:prdc
+RV,RV post BD predicted,body,POST_BD_PRDC,%,,LCS-MRCM:pul:rv:postbd:prdc
+IC,IC best,sp,BEST,L,19852-3,LCS-MRCM:pul:ic:best
+IC,IC pre BD,sp,PRE_BD,L,,LCS-MRCM:pul:ic:prebd
+IC,IC post BD,sp,POST_BD,L,,LCS-MRCM:pul:ic:postbd
+IC,IC best predicted,sp,BEST_PRDC,%,19855-6,LCS-MRCM:pul:ic:best:prdc
+IC,IC pre BD predicted,sp,PRE_BD_PRDC,%,,LCS-MRCM:pul:ic:prebd:prdc
+IC,IC post BD predicted,sp,POST_BD_PRDC,%,,LCS-MRCM:pul:ic:postbd:prdc
+FEV,FEV1 best,sp,BEST,L,20150-9,LCS-MRCM:pul:fev1:best
+FEV,FEV1 pre BD,sp,PRE_BD,L,20157-4,LCS-MRCM:pul:fev1:prebd
+FEV,FEV1 post BD,sp,POST_BD,L,20155-8,LCS-MRCM:pul:fev1:postbd
+FEV,FEV1 best predicted,sp,BEST_PRDC,%,,LCS-MRCM:pul:fev1:best:prdc
+FEV,FEV1 pre BD predicted,sp,PRE_BD_PRDC,%,,LCS-MRCM:pul:fev1:prebd:prdc
+FEV,FEV1 post BD predicted,sp,POST_BD_PRDC,%,,LCS-MRCM:pul:fev1:postbd:prdc
+FVC,FVC best,sp,BEST,L,19868-9,LCS-MRCM:pul:fvc:best
+FVC,FVC pre BD,sp,PRE_BD,L,19876-2,LCS-MRCM:pul:fvc:prebd
+FVC,FVC post BD,sp,POST_BD,L,19874-7,LCS-MRCM:pul:fvc:postbd
+FVC,FVC best predicted,sp,BEST_PRDC,%,,LCS-MRCM:pul:fvc:best:prdc
+FVC,FVC pre BD predicted,sp,PRE_BD_PRDC,%,,LCS-MRCM:pul:fvc:prebd:prdc
+FVC,FVC post BD predicted,sp,POST_BD_PRDC,%,,LCS-MRCM:pul:fvc:postbd:prdc
+DLCO,DLCOc SB best,d,BEST,cc/min/mmHg,19911-7,LCS-MRCM:pul:dlco:best
+DLCO,DLCOc SB pre BD,d,PRE_BD,cc/min/mmHg,,LCS-MRCM:pul:dlco:prebd
+DLCO,DLCOc SB post BD,d,POST_BD,cc/min/mmHg,,LCS-MRCM:pul:dlco:postbd
+DLCO,DLCOc SB best predicted,d,BEST_PRDC,%,,LCS-MRCM:pul:dlco:best:prdc
+DLCO,DLCOc SB pre BD predicted,d,PRE_BD_PRDC,%,,LCS-MRCM:pul:dlco:prebd:prdc
+DLCO,DLCOc SB post BD predicted,d,POST_BD_PRDC,%,,LCS-MRCM:pul:dlco:postbd:prdc
+DLCOVA,DLCOC VA,d,BEST,mL/min/mm[Hg]/L,19916-6,LCS-MRCM:pul:dlcova:best
+DLCOVA,DLCOC VA pre,d,PRE_BD,mL/min/mm[Hg]/L,82619-8,LCS-MRCM:pul:dlcova:prebd
+DLCOVA,DLCOC VA post,d,POST_BD,mL/min/mm[Hg]/L,82620-6,LCS-MRCM:pul:dlcova:postbd
+DLCOVA,DLCOC VA best predicted,d,BEST_PRDC,%,,LCS-MRCM:pul:dlcova:best:prdc
+DLCOVA,DLCOC VA pre BD predicted,d,PRE_BD_PRDC,%,,LCS-MRCM:pul:dlcova:prebd:prdc
+DLCOVA,DLCOC VA post BD predicted,d,POST_BD_PRDC,%,,LCS-MRCM:pul:dlcova:postbd:prdc

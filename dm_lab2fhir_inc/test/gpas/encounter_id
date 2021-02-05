@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+          <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:psn="http://psn.ttp.ganimed.icmvc.emau.org/">
+            <soapenv:Header/>
+              <soapenv:Body>
+                <psn:addDomain>
+                  <domainDTO>
+                    <name>encounter_id</name>
+                    <checkDigitClass>org.emau.icmvc.ganimed.ttp.psn.generator.ReedSolomonLagrange</checkDigitClass>
+                    <alphabet>org.emau.icmvc.ganimed.ttp.psn.alphabets.Symbol31</alphabet>
+                    <properties>PSN_LENGTH=31;PSN_PREFIX=dic-eid-;INCLUDE_PREFIX_IN_CHECK_DIGIT_CALCULATION=false;PSNS_DELETABLE=true;MAX_DETECTED_ERRORS=2;</properties>
+                    <comment>encounter domain</comment>
+                  </domainDTO>
+                </psn:addDomain>
+            </soapenv:Body>
+          </soapenv:Envelope>

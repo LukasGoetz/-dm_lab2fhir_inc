@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dm-lab2fhir-inc
+  namespace: diz20-dev
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: dm-lab2fhir-inc
+  template:
+    metadata:
+      labels:
+        app: dm-lab2fhir-inc
+    spec:
+      containers:
+      - image: gitlab.dbmi.klima.ads.local:5050/hlz/streaming/dm_lab2fhir_inc:v1.0.0
+        name: dm-lab2fhir-inc
+        ports:
+        - containerPort: 5432
+        - containerPort: 8080
+        - containerPort: 8082
+        env:
+          - name: LISTENER_PORT
+            valueFrom:
+              secretKeyRef:
+                name: db-config-mapper
+                key: listener_port
+          - name: DATABASE_HOST
+            valueFrom:
+              secretKeyRef:
+                name: db-config-mapper
+                key: database_host
+          - name: DATABASE_DBNAME
+            valueFrom:
+              secretKeyRef:
+                name: db-config-mapper
+                key: database_dbname
+          - name: DATABASE_USR
+            valueFrom:
+              secretKeyRef:
+                name: db-config-mapper
+                key: database_usr
+          - name: DATABASE_PWD
+            valueFrom:
+              secretKeyRef:
+                name: db-config-mapper
+                key: database_pwd
+      imagePullSecrets:
+      - name: regcred

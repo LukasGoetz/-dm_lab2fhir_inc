@@ -1,0 +1,28 @@
+code,dischargeDisplay,dischargeDispositionCode,dischargeDispositionDisplay
+01,Behandlung regulär beendet,home,Home
+02,Behandlung regulär beendet - nachstationäre Behandlung vorgesehen,home,Home
+03,Behandlung aus sonstigen Gründen beendet,home,Home
+04,Behandlung gegen ärztlichen Rat beendet,aadvice,Left against advice
+05,Zuständigkeitswechsel des Kostenträgers,oth,Other
+06,Verlegung in ein anderes Krankenhaus,other-hcf,Other healthcare facility
+07,Tod,exp,Expired
+08,Verlegung in ein anderes Krankenhaus im Rahmen einer Zusammenarbeit (§ 14 Abs. 5 Satz 2 BPflV in der am 31.12.2003 geltenden Fassung),other-hcf,Other healthcare facility
+09,Entlassung in eine Rehabilitationseinrichtung,rehab,Rehabilitation
+10,Entlassung in eine Pflegeeinrichtung,snf,Skilled nursing facility
+11,Entlassung in ein Hospiz,hosp,Hospice
+12,interne Verlegung,oth,Other
+13,externe Verlegung zur psychiatrischen Behandlung,psy,Psychiatric hospital
+14,Behandlung aus sonstigen Gründen beendet - nachstationäre Behandlung vorgesehen,home,Home
+15,Behandlung gegen ärztlichen Rat beendet - nachstationäre Behandlung vorgesehen,aadvice,Left against advice
+16,externe Verlegung mit Rückverlegung oder Wechsel zwischen den Entgeltbereichen der DRG-Fallpau-schalen - nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG mit Rückverlegung,oth,Other
+17,interne Verlegung mit Wechsel zwischen den Entgeltbereichen der DRG-Fallpauschalen - nach der BPflV oder für besondere Einrichtungen nach § 17b Abs. 1 Satz 15 KHG,oth,Other
+18,Rückverlegung,oth,Other
+19,Entlassung vor Wiederaufnahme mit Neueinstufung,oth,Other
+20,Entlassung vor Wiederaufnahme mit Neueinstufung wegen Komplikation,oth,Other
+21,Entlassung oder Verlegung mit nachfolgender Wiederaufnahme,oth,Other
+22,Fallabschluss (interne Verlegung) bei Wechsel zwischen voll- teilstationärer und stationsäquivalenter Behandlung,oth,Other
+23,Beginn eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für verlegende Fachabteilung),oth,Other
+24,Beendigung eines externen Aufenthalts mit Abwesenheit über Mitternacht (BPflV-Bereich – für Pseudo-Fachabteilung 0003),oth,Other
+25,Entlassung zum Jahresende bei Aufnahme im Vorjahr (für Zwecke der Abrechnung - § 4 PEPPV),oth,Other
+26,Beginn eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung),oth,Other
+27,Beendigung eines Zeitraumes ohne direkten Patientenkontakt (stationsäquivalente Behandlung – für Pseudo-Fachabteilung 0004),oth,Other

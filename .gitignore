@@ -1,0 +1,6 @@
+.VERSION
+.NORELEASE
+config
+__pycache__/
+*.py[cod]
+*.log

@@ -1,0 +1,21 @@
+patient_id,patient_lastname,patient_firstname,patient_birthdate,patient_sex,patient_address_countrycode,patient_address_zipcode,patient_address_city,patient_address_street,patient_address_admregioncode,patient_insurance_identifier,patient_deceased_flag,patient_deceased_timestamp,patient_last_update
+85631,Schuhbeck,Sissi,1953-10-28,W,DE,68542,Heddesheim,Leutershausener Str.,8226028,A106913566,0,,2019-06-24
+60149,Pückler,Wibke,1960-03-05,W,DE,68169,Mannheim,Alphornstr.,8222000,D744948054,1,2017-01-26 06:15:00+00:00,2017-01-26
+54174,Neuhaus,Fiora,1962-08-19,W,DE,68165,Mannheim,Werderstr.,8222000,E941851837,0,,2020-09-22
+37834,Steinhaeusser,Karolina,1968-12-19,W,DE,68542,Heddesheim,Triebstr.,8226028,T125317167,0,,2016-08-10
+51418,Theiner,Susanne,1973-07-15,W,DE,68259,Mannheim,Adolf-Damaschke-Ring,8222000,G945397105,0,,2017-03-29
+57163,Strauch,Angelina,1982-10-15,W,DE,68305,Mannheim,Alsenweg 60,8222000,E785167337,0,,2014-07-02
+59396,Nimitz,Liliana,1988-07-04,W,DE,68259,Mannheim,Wimpfener Str.,8222000,F297377216,0,,2016-07-15
+17956,Rottmann,Melanie,1990-12-02,W,DE,69118,Heidelberg,Kleingemünder Str.,8221000,G439806419,0,,2018-10-18
+96730,Hecher,Jette,1996-11-26,W,DE,68535,Edingen-Neckarhausen,Edistr.,8226105,H494827239,0,,2019-03-19
+35053,Braune,Tia,1997-01-30,W,DE,68542,Heddesheim,In der Sackpfeif 38,8226028,K353227622,0,,2014-08-13
+45932,Rohrmann,Finn,1997-03-07,M,DE,68169,Mannheim,Am Schulgarten,8222000,P792593184,0,,2015-06-13
+37474,Degen,Harry,2000-03-29,M,DE,68309,Mannheim,Mannheimer Str.,8222000,I783763222,0,,2017-06-01
+84328,Hönigberg,Josef,2001-09-29,M,DE,68169,Mannheim,Öhmdstr.,8222000,M163374948,0,,2019-06-02
+3020,Oppolzer,Eric,2001-12-10,M,DE,68623,Lampertheim,Hagenstr.,6431013,U784188372,0,,2020-10-06
+91314,Ehmann,Ben,2002-06-30,M,DE,68199,Mannheim,Rheingoldstr.,8222000,B004804763,0,,2017-03-31
+55754,Rabe,Armin,2003-06-24,M,DE,68199,Mannheim,Speyerer Str.,8222000,Y682262142,0,,2016-06-17
+64181,Degen,Ferdinand,2004-06-29,M,DE,69502,Hemsbach,Franz-Lehar-Str.,8226031,T264326622,0,,2019-05-20
+35377,Ungar,Valle,2008-08-19,M,DE,68165,Mannheim,Elisabethstr.,8222000,F766774543,0,,2017-01-11
+87554,Nessel,Albin,2016-08-19,M,DE,68259,Mannheim,Andreas-Hofer-Str. 38,8222000,A240957255,0,,2014-07-15
+18089,Wernicke,Magnus,2017-03-24,M,DE,68169,Mannheim,Langstr.,8222000,R225371262,0,,2020-07-05

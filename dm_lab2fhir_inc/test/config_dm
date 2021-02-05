@@ -1,0 +1,55 @@
+[server]
+url_hapi_fhir = http://10.3.8.78:8082/fhir/
+url_gpas = http://gpas:8080/gpas/gpasService
+url_loinc_converter = http://loinc_converter:8080/conversions
+
+[db]
+chunk_size = 50
+
+[dat_paths]
+ops_drug_mapping = /opt/dm_lab2fhir_inc/dat/ops_med_mapping.csv
+drug_unii_mapping = /opt/dm_lab2fhir_inc/dat/alleSubstanzenMapping.csv
+admissionreason_1_2 = /opt/dm_lab2fhir_inc/dat/aufnahmegrund_1_2_stelle.csv
+admissionreason_3_4 = /opt/dm_lab2fhir_inc/dat/aufnahmegrund_3_4_stelle.csv
+dischargereason_1_2 = /opt/dm_lab2fhir_inc/dat/entlassungsgrund_1_2_stelle.csv
+dischargereason_3 = /opt/dm_lab2fhir_inc/dat/entlassungsgrund_3_stelle.csv
+department_codes = /opt/dm_lab2fhir_inc/dat/dep.csv
+lufu_loinc_mapping = /opt/dm_lab2fhir_inc/dat/parameter_vergleich_lufu_cosyconet.csv
+
+[systems]
+patient_id = https://miracum.org/fhir/NamingSystem/identifier/PatientId
+encounter_id = https://miracum.org/fhir/NamingSystem/identifier/EncounterId
+subencounter_id = https://miracum.org/fhir/NamingSystem/identifier/SubEncounterId
+department_id = https://miracum.org/fhir/NamingSystem/identifier/DepartmentId
+lab_id = https://miracum.org/fhir/NamingSystem/identifier/LaboratorySurrogateObservationId
+p21obs_id = https://miracum.org/fhir/NamingSystem/identifier/P21SurrogateObservationId
+condition_id = https://miracum.org/fhir/NamingSystem/identifier/P21SurrogateConditionId
+med_id = https://miracum.org/fhir/NamingSystem/identifier/P21SurrogateMedicationId
+med_stm_id = https://miracum.org/fhir/NamingSystem/identifier/P21SurrogateMedicationStatementId
+prod_id = https://miracum.org/fhir/NamingSystem/identifier/P21SurrogateProcedureId
+admission_reason = https://fhir.miracum.org/core/CodeSystem/aufnahmegrund
+admission_reason_url = https://fhir.miracum.org/core/StructureDefinition/aufnahmegrund
+discharge_reason = http://miracum.org/fhir/CodeSystem/p301/entlassungsgrund
+discharge_reason_url = http://miracum.org/fhir/StructureDefinition/p21-extensions/entlassungsgrund
+lufu_obs_id = https://miracum.org/fhir/NamingSystem/identifier/LungFunctionSurrogateObservationId
+
+[dwh_db]
+host = test_db
+db = postgres
+usr = postgres
+pwd = unittest1234
+dbsystem = psql
+
+[fhir_db]
+host = test_db
+db = postgres
+usr = stg_fhir_dm
+pwd = stg_fhir_dm
+dbsystem = psql
+
+[fake]
+host = 10.3.8.121
+db = postgres
+usr = stg_fhir
+pwd = c2HcmQYnynQvtlpoWRa3
+dbsystem = psql

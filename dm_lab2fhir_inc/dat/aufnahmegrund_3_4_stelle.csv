@@ -1,0 +1,8 @@
+code,admissionDisplay
+01,Normalfall
+02,Arbeitsunfall/Berufskrankheit (§ 11 Abs. 5 SGB V)
+03,Verkehrsunfall/Sportunfall/Sonstiger Unfall (z.B. § 116 SGB X)
+04,Hinweis auf Einwirkung von äußerer Gewalt
+05,frei
+06,Kriegsbeschädigten-Leiden/BVG-Leiden
+07,Notfall

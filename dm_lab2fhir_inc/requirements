@@ -1,0 +1,8 @@
+#Database Related Libraries
+psycopg2-binary==2.8.6
+pandas
+sqlalchemy
+
+#HL7 FHIR Library
+git+http://github.com/smart-on-fhir/client-py@v4.0.0#egg=fhirclient
+
